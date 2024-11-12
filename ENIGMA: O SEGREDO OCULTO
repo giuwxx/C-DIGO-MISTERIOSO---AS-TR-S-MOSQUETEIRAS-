@@ -54,3 +54,52 @@ in() {
 
 
 
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+int main(){
+	
+	setlocale(LC_ALL, "portuguese");
+	
+	printf("ENIGMA DO SEGREDO OCULTO\n");
+	printf("\nEu sou guardiã de um segredo, protegida por camadas de sombra e névoa.\nQuem busca a verdade deve olhar além do óbvio, nas entrelinhas do oculto.\n");
+	printf("\nSiga estas três pistas para me encontrar: ");
+	printf("\n-Primeira pista: Busque a essência do que é invisível, mas sempre presente na quietude ao nosso redor.\n-Segunda pista: Eu não tenho cor, não tenho uma forma.Eu existo, mas não posso ser tocado, apenas sentido.\n-Terceira pista: Sou parte do dia e da noite, mas não sou luz nem a escuridão.\n\nSe for neccesário, digite 'ajuda' e talvez o eco te ofereça uma nova pista\n");
+
+	char resposta_enigma[20], dica_ajuda[3];
+	int tentativas;
+	
+	do{
+		
+	printf("\nResolva o enigma do segredo oculto para prosseguir.");
+	printf("\nInsira sua resposta: ");
+	scanf("%s", &resposta_enigma);
+	
+	printf("\nResposta errada, tente novamente.");
+	
+	printf("\nVocê precisa de ajuda ?: ");
+	scanf("%s", &dica_ajuda);
+	
+	if(strcmp(dica_ajuda, "sim")==0){
+		
+		printf("\nDos inocentes, surgiu um segredo que ninguém ousava desvendar.\n");
+	}
+
+	}while(strcmp(resposta_enigma, "silencio")!=0);
+	
+	printf("\nParabéns, você desvendou o enigma!");
+
+
+}
+
+
+
