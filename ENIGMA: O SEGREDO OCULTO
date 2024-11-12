@@ -1,105 +1,40 @@
-"Eu sou a guardiã de um segredo, protegido por camadas de sombra e mistério. 
-Quem busca a verdade deve olhar além do óbvio, nas entrelinhas do oculto. 
-Siga estas três pistas para me encontrar:"
-
-Primeira pista: Busque a essência do que é invisível, mas sempre presente na quietude ao nosso redor.
-Segunda pista: Eu não tenho cor, não tenho uma forma. Eu existo, mas não posso ser tocado, apenas sentido.
-Terceira pista: Sou parte do dia e da noite, mas não sou a luz nem a escuridão. Sou um abrigo para os sons não ditos.
-
-
-Dica: Em mim a alma se escuta, escavando ecos do que não se vê
-
-
-Se você se confundir, digite 'ajuda' e talvez o eco te ofereça uma nova pista.
-
-ajuda: Dos inocentes, surgiu um segredo que ninguém ousava desvendar.
-
-Desafio:
-Digite a palavra correta para ver o segredo revelado e passar pela porta oculta."
-
-in() {
-    char resposta[20];
-    int tentativas = 0;
-
-    printf("Resolva o enigma da porta oculta para prosseguir.\n");
-
-    while (1) {
-        printf("\nInsira sua resposta: ");
-        scanf("%s", resposta);
-        
-        if (strcmp(resposta, "silencio") == 0) {
-            printf("Parabéns, você desvendou o segredo oculto e avança no caminho.\n");
-            break;
-        } else if (strcmp(resposta, "ajuda") == 0) {
-            if (tentativas == 0) {
-                printf("Pista adicional: Eu sou a ausência de som, a calmaria em meio ao caos. Sou um refúgio para a mente.\n");
-            } else if (tentativas == 1) {
-                printf("Pista especial: Sou o que resta quando tudo fica em silêncio. Sou essencial para que se ouça a própria voz interior.\n");
-            } else {
-                printf("Última dica: Pense em algo que todos buscam para descanso e paz. Sou mais que ausência de barulho; sou tranquilidade.\n");
-            }
-            tentativas++;
-        } else if (strcmp(resposta, "poesia") == 0) {
-            printf("\n*** A Porta Sussurra ***\n");
-            printf("Dentro da névoa, um segredo se revela:\n");
-            printf("Onde as palavras descansam, há um portal de calma,\n");
-            printf("onde o sussurro do vento escreve uma nova alma.\n");
-            printf("Reflita sobre o que busca e tente novamente.\n");
-        } else {
-            printf("Resposta incorreta. A porta oculta permanece fechada.\n");
-        }
-    }
-
-    return 0;
-
-
-
-
-
-
-
-
-
-
-#include <stdio.h>
-#include <stdlib.h>
+#include <studio.h>
 #include <locale.h>
-#include <string.h>
+#include <stdlib.h>
 
 int main(){
 	
-	setlocale(LC_ALL, "portuguese");
+	setlocal(LC_ALL, "portugues");
 	
-	printf("ENIGMA DO SEGREDO OCULTO\n");
-	printf("\nEu sou guardiã de um segredo, protegida por camadas de sombra e névoa.\nQuem busca a verdade deve olhar além do óbvio, nas entrelinhas do oculto.\n");
-	printf("\nSiga estas três pistas para me encontrar: ");
-	printf("\n-Primeira pista: Busque a essência do que é invisível, mas sempre presente na quietude ao nosso redor.\n-Segunda pista: Eu não tenho cor, não tenho uma forma.Eu existo, mas não posso ser tocado, apenas sentido.\n-Terceira pista: Sou parte do dia e da noite, mas não sou luz nem a escuridão.\n\nSe for neccesário, digite 'ajuda' e talvez o eco te ofereça uma nova pista\n");
+    printf("*****O SEGREDO OCULTO*****\n");
+    printf("\nEu sou a guardiã de um segredo, protegido por camadas de sombras e mistério.\nQuem busca a verdade deve olhar além do óbvio, nas entrelinhas do oculto.\n\nSiga estas três pistas para desvendar o mistério:\n");
+	printf("- Primeira pista:Busque a essência do que é invisível, mas sempre presente na quietude ao nosso redor.\n");
+	printf("- Segunda pista:Eu não tenho cor, não tenho uma forma. Eu existo, mas não sou a luz nem a escuridão. Sou um abrigo para os sons não ditos.\n");
+	printf("- Terceira pista:Sou parte do dia e da noite, mas não sou luz nem a escuridão.\n");
 
-	char resposta_enigma[20], dica_ajuda[3];
-	int tentativas;
+	printf("\nSe você precisar, digite *ajuda* e talvez o eco te ofereça uma nova pista.\n");
+	
+	
+	char respostas[20];
+	float tentativas = 0;
+	
 	
 	do{
-		
-	printf("\nResolva o enigma do segredo oculto para prosseguir.");
-	printf("\nInsira sua resposta: ");
-	scanf("%s", &resposta_enigma);
+		print("\nResolva o enigma da porta oculta para prosseguir.\n");
+	    printf("Insira sua resposta: ");
+		scanf("%c", resposta);
+		if(strcmp(resposta, "silencio")==0) {
+			printf("\nParabéns, você desvendou o segredo oculto.\n");
+		}else if(strcmp(resposta; "ajuda")=0){
+			printf("DICA:Dos inocentes, surgiu um segredo que niguém ousava desvendar.")
+		}else;{
+			print("Resposta incorreta. O segredo permanece oculto!\n");
+			tentativas+;
+			
+		}
+	}while(resposta, "silencio")!=0);
 	
-	printf("\nResposta errada, tente novamente.");
+	printf("\nVocê tentou: %d ", tentativas);
 	
-	printf("\nVocê precisa de ajuda ?: ");
-	scanf("%s", &dica_ajuda);
 	
-	if(strcmp(dica_ajuda, "sim")==0){
-		
-		printf("\nDos inocentes, surgiu um segredo que ninguém ousava desvendar.\n");
-	}
-
-	}while(strcmp(resposta_enigma, "silencio")!=0);
-	
-	printf("\nParabéns, você desvendou o enigma!");
-
-
-}
-
-
 
